@@ -15,6 +15,7 @@
 		EFDC2DE61602CE89003E0C39 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC2DE51602CE89003E0C39 /* WhereamiAppDelegate.m */; };
 		EFDC2DE91602CE89003E0C39 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDC2DE81602CE89003E0C39 /* WhereamiViewController.m */; };
 		EFDC2DEC1602CE8A003E0C39 /* WhereamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFDC2DEA1602CE8A003E0C39 /* WhereamiViewController.xib */; };
+		EFDC2DF31602CFAB003E0C39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC2DF21602CFAB003E0C39 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		EFDC2DE71602CE89003E0C39 /* WhereamiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
 		EFDC2DE81602CE89003E0C39 /* WhereamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
 		EFDC2DEB1602CE8A003E0C39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhereamiViewController.xib; sourceTree = "<group>"; };
+		EFDC2DF21602CFAB003E0C39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDC2DF31602CFAB003E0C39 /* CoreLocation.framework in Frameworks */,
 				EFDC2DD61602CE89003E0C39 /* UIKit.framework in Frameworks */,
 				EFDC2DD81602CE89003E0C39 /* Foundation.framework in Frameworks */,
 				EFDC2DDA1602CE89003E0C39 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		EFDC2DD41602CE89003E0C39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFDC2DF21602CFAB003E0C39 /* CoreLocation.framework */,
 				EFDC2DD51602CE89003E0C39 /* UIKit.framework */,
 				EFDC2DD71602CE89003E0C39 /* Foundation.framework */,
 				EFDC2DD91602CE89003E0C39 /* CoreGraphics.framework */,

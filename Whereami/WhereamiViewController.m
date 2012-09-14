@@ -14,21 +14,37 @@
 
 @implementation WhereamiViewController
 
-- (void)viewDidLoad
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil] ;
+    
+    if (self) {
+        // create location manager object
+        locationManager = [[CLLocationManager alloc] init] ;
+        
+        // there will be a warning from this line of code; ignore for now
+        [locationManager setDelegate:self] ;
+        
+        // and we want it to be as accurate as possible
+        // regardless of how much time/power it takes
+        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest] ;
+        
+        // tell our manager to start looking for its location immediately
+        [locationManager startUpdatingLocation] ;
+    }
+    
+    return self ;
 }
-
-- (void)viewDidUnload
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    NSLog(@"%@", newLocation) ;
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWIthError:(NSError *)error
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    NSLog(@"Could not find location: %@", error) ;
 }
 
 @end
