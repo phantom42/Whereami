@@ -22,14 +22,15 @@
         // create location manager object
         locationManager = [[CLLocationManager alloc] init] ;
         
-        [self doSomethingWeird] ;
-        
         // there will be a warning from this line of code; ignore for now
         [locationManager setDelegate:self] ;
         
         // and we want it to be as accurate as possible
         // regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest] ;
+        
+        // set minimum distance change for an update to register
+        [locationManager setDistanceFilter:50];
         
         // tell our manager to start looking for its location immediately
         [locationManager startUpdatingLocation] ;
@@ -55,11 +56,6 @@
     [locationManager setDelegate:nil] ;
 }
 
-- (void)doSomethingWeird
-{
-    NSLog(@"Line 1");
-    NSLog(@"Line 2");
-    NSLog(@"Line 3");
-}
+
 
 @end

@@ -15,6 +15,4 @@
     CLLocationManager *locationManager ;
 }
 
-- (void)doSomethingWeird ;
-
 @end
